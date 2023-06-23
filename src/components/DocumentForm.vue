@@ -141,7 +141,7 @@ getTipoDocClient()
 </script>
 
 <template>
-    <v-form>
+    <v-form >
         <v-text-field 
             v-model="documento.nombre"
             label="Nombre"

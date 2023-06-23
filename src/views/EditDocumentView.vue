@@ -17,7 +17,6 @@ const getDocumentoClient = async () => {
     try {
         const { data } = await getDocumento(id);
         documento.value = data;
-        return data;
     } catch (error) {
         alert.value = true
         alert.alertType = 'error'

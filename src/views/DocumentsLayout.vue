@@ -12,9 +12,6 @@ const logOut = async () => {
 
 <template>
     <v-app-bar>
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
-        <v-toolbar-title>Documentos</v-toolbar-title>
-        <v-spacer></v-spacer>
         <v-btn to="/documentos/todos">
             Ver todos
         </v-btn>
@@ -25,7 +22,6 @@ const logOut = async () => {
             Cerrar sesión
         </v-btn>
     </v-app-bar>
-    <v-spacer>
-    </v-spacer>
+    <div class="my-6" />
     <router-view></router-view>
 </template>
