@@ -1,8 +1,11 @@
 <script setup>
 import { reactive } from 'vue';
-import { logIn } from '@/services/api'
+import { logIn } from '@/services/api/auth.js'
 import AlertMessage from '@/components/AlertMessage.vue'
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex'
 
+const store = useStore()
 const user = reactive({
   email: '',
   password: ''
@@ -12,11 +15,12 @@ const alert = reactive({
   alertType: '',
   value: false
 })
+const router = useRouter()
 
 const login = () => {
   logIn(user)
-    .then((res) => {
-      console.log(res)
+    .then(() => {
+      router.push('/documentos')
     })
     .catch((err) => {
       alert.value = true
