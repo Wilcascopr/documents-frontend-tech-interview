@@ -12,6 +12,7 @@ A continuación se detallan los requisitos de instalación y configuración para
 - MySQL 8.0
 - Composer (se utiliza para gestionar las dependencias del proyecto)
 - Node 18.16.0
+- NPM
 
 ## Instrucciones de despliegue
 
