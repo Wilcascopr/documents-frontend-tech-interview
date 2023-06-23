@@ -15,6 +15,36 @@ A continuación se detallan los requisitos de instalación y configuración para
 
 ## Instrucciones de despliegue
 
+**Frontend:**
+
+1. Clona el repositorio del frontend en tu máquina local:
+
+   ```bash
+   git clone https://github.com/Wilcascopr/documents-frontend-tech-interview
+   ```
+
+2. Navega al directorio del frontend:
+
+   ```bash
+   cd documents-frontend-tech-interview
+   ```
+
+3. Modifica el archivo /src/services/api/api.js y actualiza la URL del backend con la dirección de tu servidor de desarrollo de Laravel (por defecto, 'http://localhost:8000').
+
+4. Instala las dependencias del proyecto:
+
+   ```bash
+   npm install
+   ```
+
+5. Inicia el servidor de desarrollo del frontend:
+
+   ```arduino
+   npm run serve
+   ```
+
+6. Accede a la aplicación en tu navegador web mediante la URL proporcionada por el servidor de desarrollo del frontend.
+
 **Backend:**
 
 1. Clona el repositorio del backend en tu máquina local:
@@ -72,36 +102,6 @@ A continuación se detallan los requisitos de instalación y configuración para
    ```bash
    php artisan serve
    ```
-
-**Frontend:**
-
-1. Clona el repositorio del frontend en tu máquina local:
-
-   ```bash
-   git clone https://github.com/Wilcascopr/documents-frontend-tech-interview
-   ```
-
-2. Navega al directorio del frontend:
-
-   ```bash
-   cd documents-frontend-tech-interview
-   ```
-
-3. Modifica el archivo /src/services/api/api.js y actualiza la URL del backend con la dirección de tu servidor de desarrollo de Laravel (por defecto, 'http://localhost:8000').
-
-4. Instala las dependencias del proyecto:
-
-   ```bash
-   npm install
-   ```
-
-5. Inicia el servidor de desarrollo del frontend:
-
-   ```arduino
-   npm run serve
-   ```
-
-6. Accede a la aplicación en tu navegador web mediante la URL proporcionada por el servidor de desarrollo del frontend.
 
 ## Credenciales de inicio de sesión
 
