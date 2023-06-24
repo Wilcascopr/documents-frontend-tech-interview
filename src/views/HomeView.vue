@@ -3,9 +3,7 @@ import { reactive } from 'vue';
 import { logIn } from '@/services/api/auth.js'
 import AlertMessage from '@/components/AlertMessage.vue'
 import { useRouter } from 'vue-router';
-import { useStore } from 'vuex'
 
-const store = useStore()
 const user = reactive({
   email: '',
   password: ''
@@ -20,7 +18,7 @@ const router = useRouter()
 const login = () => {
   logIn(user)
     .then(() => {
-      router.push('/documentos')
+      router.push('/documentos/todos')
     })
     .catch((err) => {
       alert.value = true

@@ -26,7 +26,7 @@ const postDocumento = (data) => {
     return api.post('/api/doc-documentos', data).then(res => res.data);
 }
 
-const updateDocumento = (id, data) => {
+const updateDocumento = (data, id) => {
     return api.put(`/api/doc-documentos/${id}`, data).then(res => res.data);
 }
 

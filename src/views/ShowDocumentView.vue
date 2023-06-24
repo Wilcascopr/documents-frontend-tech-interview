@@ -56,8 +56,7 @@ getDocumentoClient()
                     <h1>Documento - {{ documento.codigo }}</h1>
                 </v-card-title>
                 <v-card-text>
-                    <h2>{{ documento.nombre }}</h2>
-                    <h3>{{ documento.codigo }}</h3>
+                    <h2>Titulo: {{ documento.nombre }} - ID: {{ documento.id }}</h2>
                     <h5>{{ documento.tip_tipo_doc.nombre }}</h5>
                     <h5>{{ documento.pro_proceso.nombre }}</h5>
                     <p>{{ documento.contenido }}</p>

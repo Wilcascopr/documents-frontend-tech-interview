@@ -37,7 +37,6 @@ const headersDocumentos = ref([
 ])
 
 watch(searchFilters, () => {
-    if (!searchFilters.search && !searchFilters.proceso && !searchFilters.tipoDoc) return;
     setTimeout(() => {
         getDocumentosClient()
     }, 350);

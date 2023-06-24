@@ -1,5 +1,6 @@
 <script setup>
 import { reactive, ref, watch } from 'vue';
+import { useRouter } from 'vue-router';
 import { getTipoDocs, getProcesos, postDocumento, updateDocumento } from '@/services/api/backend.js'
 import AlertMessage from './AlertMessage.vue';
 
@@ -10,6 +11,7 @@ const props = defineProps({
         default: null
     },
 })
+const router = useRouter();
 const alert = reactive({
   message: '',
   alertType: '',
@@ -90,6 +92,7 @@ const crearDocumentoClient = () => {
             alert.message = 'Documento creado correctamente'
             setTimeout(() => {
                 alert.value = false
+                router.push('/documentos/ver/'+res.data.id)
             }, 3000)
         })
         .catch((err) => {
@@ -115,6 +118,7 @@ const editarDocumentoClient = () => {
             alert.message = 'Documento editado correctamente'
             setTimeout(() => {
                 alert.value = false
+                router.push('/documentos/ver/' + props.documento.id)
             }, 3000)
         })
         .catch((err) => {
@@ -128,6 +132,16 @@ const editarDocumentoClient = () => {
 }
 
 const handleSubmit = () => {
+    if (!documento.proceso || !documento.tipoDoc || !documento.nombre.length || !documento.contenido.length) {
+        alert.value = true
+        alert.alertType = 'error'
+        alert.message = 'Verifica que todos los campos se hayan llenado.'
+        setTimeout(() => {
+            alert.value = false
+        }, 3000)
+        return;
+    }
+
     if (props.documento) {
         editarDocumentoClient()
     } else {
